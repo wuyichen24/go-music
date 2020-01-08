@@ -1,17 +1,23 @@
 # go-music
 
 ## Getting Started
-### React
-- install node.js
-- install all dependencies
-  `npm install`
-- Start react server
-  `npm start`
+### MySQL (Database)
+- Install MySQL
+- Create [database and tables](sql/create_schema.sql)
 
-### Gin
-- install golang
-- install gin
+### Gin (Backend RESTful API Server)
+- Install Golang
+- Install Gin
+- Start Gin Server
 
-### MySQL
-- install MySQL
-- create database and tables
+### React (Frontend Server)
+- Install [Node.js](https://nodejs.org/en/)
+- Install all dependencies.
+  ```bash
+  cd go-music
+  npm install
+  ```
+- Start react server.
+  ```bash
+  npm start
+  ```
