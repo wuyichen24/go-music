@@ -1,6 +1,17 @@
 # go-music
 This repository contains the source code of GoMusic web application which is the example in the book "[Hands-On Full Stack Development with Go(Mina Andrawos)](https://www.packtpub.com/web-development/hands-full-stack-development-go)".
 
+## Content List
+- [Technology Stack](#technology-stack)
+- [Getting Started](#getting-started)
+
+## Technology Stack
+- **Server**
+   - Frontend: React
+   - Backend (RESTful API): Gin (Go web framework)
+- **Database**
+   - MySQL
+
 ## Getting Started
 ### MySQL (Database)
 - Install MySQL
