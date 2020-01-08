@@ -8,7 +8,7 @@ This repository contains the source code of GoMusic web application which is the
 ## Technology Stack
 - **Server**
    - Frontend: React
-   - Backend (RESTful API): Gin (Go web framework)
+   - Backend: Gin (Go web framework)
 - **Database**
    - MySQL
 
