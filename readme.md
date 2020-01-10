@@ -11,6 +11,8 @@ This repository contains the source code of GoMusic web application which is the
    - Backend: Gin (Go web framework)
 - **Database**
    - MySQL
+- **Web Design**
+   - Bootstrap
 
 ## Getting Started
 ### MySQL (Database)
