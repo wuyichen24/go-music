@@ -16,6 +16,7 @@ This repository contains the source code of GoMusic web application which is the
 ### MySQL (Database)
 - Install MySQL
 - Create [database and tables](sql/create_schema.sql)
+- Insert [data](sql/insert_data.sql) into database
 
 ### Gin (Backend RESTful API Server)
 - Install Golang
