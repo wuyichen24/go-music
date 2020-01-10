@@ -15,7 +15,7 @@ INSERT INTO `orders` (`id`, `customer_id`, `product_id`, `price`, `purchase_date
 	(8, 3, 5, 200, '2018-12-29 23:37:41', '2018-12-29 23:38:28', '2018-12-29 23:38:28', NULL),
 	(9, 3, 6, 1000, '2018-12-29 23:37:54', '2018-12-29 23:38:32', '2018-12-29 23:38:32', NULL),
 	(10, 19, 6, 1000, '2018-12-29 23:37:54', '2019-01-13 00:44:55', '2019-01-13 00:44:55', NULL),
-	(11, 1, 3, 17000, '0000-00-00 00:00:00', '2019-01-14 06:03:08', '2019-01-14 06:03:08', NULL);
+	(11, 1, 3, 17000, '2018-12-29 23:37:56', '2019-01-14 06:03:08', '2019-01-14 06:03:08', NULL);
 
 INSERT INTO `products` (`id`, `image`, `smallimg`, `imgalt`, `description`, `productname`, `price`, `promotion`, `created_at`, `updated_at`, `deleted_at`) VALUES
 	(1, 'img/strings.png', 'img/img-small/strings.png', 'string', '', 'Strings', 100, NULL, '2018-08-14 07:54:19', '2019-01-11 00:28:40', NULL),
