@@ -1,22 +1,22 @@
 # React
 
 ## Installation
-- Create React App
+#### Create React App
   ```bash
   npm install -g create-react-app
   create-react-app <your app name>
   ```
 
 ## JSX
-### Concepts 
+#### Concepts 
 - Syntax extension to JavaScript.
 - JSX produces React “elements”.
 
-### Differences between JSX and HTML
+#### Differences between JSX and HTML
 - JSX use “ClassName” rather than “Class” in HTML to define a class name.
 - JSX use the camel-case naming convention.
 
-### Example
+#### Example
 - Integrate JSX with JavaScript
   ```js
   const btnElement = <ahref="#"className="btn btn-primary">Buy</a>;
@@ -29,12 +29,12 @@
   ```
 
 ## Element
-### Create An Element
+#### Create An Element
 ```js
 const btnElement = <ahref="#"className="btn btn-primary">Buy</a>;
 ```
 
-### Render
+#### Render
 Render a React element into the Document Object Model (DOM).
 ```
 const btnElement = <ahref="#"className="btn btn-primary">Buy</a>;
