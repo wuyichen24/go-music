@@ -1,14 +1,16 @@
 # React
 
-## Create React App
-```bash
-npm install -g create-react-app
-create-react-app <your app name>
-```
+## Installation
+- Create React App
+  ```bash
+  npm install -g create-react-app
+  create-react-app <your app name>
+  ```
 
 ## JSX
-- Syntax extension to JavaScript
-- JSX produces React “elements”
+- Concepts 
+   - Syntax extension to JavaScript.
+   - JSX produces React “elements”.
 - Differences between JSX and HTML
    - JSX use “ClassName” rather than “Class” in HTML to define a class name.
    - JSX use the camel-case naming convention.
@@ -23,3 +25,8 @@ create-react-app <your app name>
      const btnClass = "btn btn-primary"; 
      const btnElement = <ahref="#"className={btnClass}>{btnName}</a>;
      ```
+
+## Element
+
+## Component
+
