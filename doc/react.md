@@ -34,7 +34,7 @@
 const btnElement = <ahref="#"className="btn btn-primary">Buy</a>;
 ```
 
-#### Render
+#### Render An Element
 Render a React element into the Document Object Model (DOM).
 ```
 const btnElement = <ahref="#"className="btn btn-primary">Buy</a>;
@@ -43,9 +43,26 @@ ReactDOM.render(btnElement,document.getElementById('root'));
 
 ## Component
 #### Concepts 
-- Written as a JavaScript class or a function.
+- A JavaScript class.
 - Composed of
    - Elements
    - Props
    - State
 
+#### Create A Component
+- Key Points
+   - The class inherits the `React.Component`.
+   - The component name should start with an uppercase letter.
+   - The class has `render()` function to returns the React element.
+- Examples
+  ```js
+  import React from 'react';
+  class ComponmentName extends React.Component {
+      render() {
+          // some operations
+          return (
+          // React element
+          );
+      }
+  }
+  ```
