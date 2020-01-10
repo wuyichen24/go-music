@@ -42,4 +42,10 @@ ReactDOM.render(btnElement,document.getElementById('root'));
 ```
 
 ## Component
+#### Concepts 
+- Written as a JavaScript class or a function.
+- Composed of
+   - Elements
+   - Props
+   - State
 
