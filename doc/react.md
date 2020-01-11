@@ -53,7 +53,7 @@ ReactDOM.render(btnElement,document.getElementById('root'));
 - Key Points
    - The class inherits the `React.Component`.
    - The component name should start with an uppercase letter.
-   - The class has `render()` function to returns the React element.
+   - The class has `render()` method to return the React element.
 - Examples
   ```js
   import React from 'react';
@@ -66,15 +66,39 @@ ReactDOM.render(btnElement,document.getElementById('root'));
       }
   }
   ```
+- Render Method
+    - `render()` method needs to return a single React element.
+      ```js
+      render() {
+          return (
+              <div>              // div wraps 3 card elements as one element.
+                  <card></card>
+                  <card></card>
+                  <card></card>
+              </div>
+          );
+      }
+      ```
   
-#### Render A Component
-Use it as a DOM tag in JSX. For example, if your component name is `Card`, you can use it as `<Card/>`
+#### Use A Component
+Use it as a DOM tag in JSX. For example, if your component name is `Card`, you can use it as `<Card/>`.
 ```js
+// Define Card component
 class Card extends React.Component {
     // some functions
+    
+    render() {
+        return (
+        )
+    }
 }
 
+// Use Card component
 reactDOM.render(<Card/>, document.getElementById('root'));
 ```
 
 #### Import A Component
+
+## Props
+#### Concepts 
+- Pass of data from parent component to child components.
