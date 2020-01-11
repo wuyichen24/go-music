@@ -57,7 +57,7 @@ ReactDOM.render(btnElement,document.getElementById('root'));
 - Examples
   ```js
   import React from 'react';
-  class ComponmentName extends React.Component {
+  class YourComponentName extends React.Component {
       render() {
           // some operations
           return (
@@ -66,3 +66,15 @@ ReactDOM.render(btnElement,document.getElementById('root'));
       }
   }
   ```
+  
+#### Render A Component
+Use it as a DOM tag in JSX. For example, if your component name is `Card`, you can use it as `<Card/>`
+```js
+class Card extends React.Component {
+    // some functions
+}
+
+reactDOM.render(<Card/>, document.getElementById('root'));
+```
+
+#### Import A Component
