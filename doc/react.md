@@ -107,11 +107,20 @@ reactDOM.render(<Card/>, document.getElementById('root'));
 ```js
 class ItemContainer extends React.Component{
     render(){
-        // itemsArray is an array of items
+        // itemsArray is an array of items (hardcoded)
+        const itemsArray = [{
+         "field1" : "AAA",
+         "field2" : "BBB",
+         "field3" : "CCC"
+        }, {
+         "field1" : "XXX",
+         "field2" : "YYY",
+         "field3" : "ZZZ"
+        }];
     
-        // Generate item components
+        // Map an array of items to a list of item components
         const items = itemsArray.map(
-            item => <Item key={item.id} {...item} />   // ... will pass all the properties of a item to a item component.
+            item => <Item field1={item.field1} field2={item.field2} field3={item.field3} />
         );
         
         return (
