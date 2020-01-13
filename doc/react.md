@@ -58,25 +58,25 @@ ReactDOM.render(btnElement,document.getElementById('root'));
   ```js
   import React from 'react';
   class YourComponentName extends React.Component {
-      render() {
-          // some operations
-          return (
-              // React element
-          );
-      }
+    render() {
+      // some operations
+      return (
+        // React element
+      );
+    }
   }
   ```
 - Render Method
     - `render()` method needs to return a single React element.
       ```js
       render() {
-          return (
-              <div>              // div wraps 3 card elements as one element.
-                  <card></card>
-                  <card></card>
-                  <card></card>
-              </div>
-          );
+        return (
+          <div>              // div wraps 3 card elements as one element.
+            <card></card>
+            <card></card>
+            <card></card>
+          </div>
+        );
       }
       ```
   
@@ -85,12 +85,12 @@ Use it as a DOM tag in JSX. For example, if your component name is `Card`, you c
 ```js
 // Define Card component
 class Card extends React.Component {
-    // some functions
+  // some functions
     
-    render() {
-        return (
-        )
-    }
+  render() {
+    return (
+    )
+  }
 }
 
 // Use Card component
@@ -103,46 +103,90 @@ reactDOM.render(<Card/>, document.getElementById('root'));
 #### Concepts 
 - Pass of data from parent component to child components.
 
-#### Pass data from parent component
+#### Pass Data from Parent Component
 ```js
 class ItemContainer extends React.Component{
-    render(){
-        // itemsArray is an array of items (hardcoded)
-        const itemsArray = [{
-         "field1" : "AAA",
-         "field2" : "BBB",
-         "field3" : "CCC"
-        }, {
-         "field1" : "XXX",
-         "field2" : "YYY",
-         "field3" : "ZZZ"
-        }];
+  render(){
+    // itemsArray is an array of items (hardcoded)
+    const itemsArray = [{
+      "field1" : "AAA",
+      "field2" : "BBB",
+      "field3" : "CCC"
+    }, {
+      "field1" : "XXX",
+      "field2" : "YYY",
+      "field3" : "ZZZ"
+    }];
     
-        // Map an array of items to a list of item components
-        const items = itemsArray.map(
-            item => <Item field1={item.field1} field2={item.field2} field3={item.field3} />
-        );
+    // Map an array of items to a list of item components
+    const items = itemsArray.map(
+      item => <Item field1={item.field1} field2={item.field2} field3={item.field3} />
+    );
         
-        return (
-            <div>
-                {items}
-            </div>
-        )
-    }
+    return (
+      <div>
+        {items}
+      </div>
+    )
+  }
 }
 ```
 
-#### Get data in child components
+#### Get Data in Child Components
 Access data by `this.props`
 ```js
 class Item extends React.Component{
-    render(){
-        // This is an example
-        <div>
-            <p>{this.props.field1}</p>
-            <p>{this.props.field2}</p>
-            <p>{this.props.field3}</p>
-        </div>
-    }
+  render(){
+    // This is an example
+    <div>
+      <p>{this.props.field1}</p>
+      <p>{this.props.field2}</p>
+      <p>{this.props.field3}</p>
+    </div>
+  }
 }
 ```
+
+## State
+#### Concepts
+- It is for internal use in a component and is not shared with other components.
+
+#### Initialize State Value
+The initial value for state can be set in the class constructor.
+```js
+class Clock extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {itemsArray : []};
+  }
+}
+```
+
+#### Set State Value
+Use `this.setState()` method to set the statue value.
+```js
+this.setState({itemsArray : []});
+```
+Do not modify state directly.
+
+#### Fetch Data
+- From `.json` file
+  ```js
+  fetch('items.json')         // This is the file path
+      .then(res => res.json())
+      .then((result) => {
+        this.setState({
+          itemsArray: result
+        });
+  });
+  ```
+- From API
+  ```js
+  fetch('/items')             // This is the URL
+      .then(res => res.json())
+      .then((result) => {
+        this.setState({
+          itemsArray: result
+        });
+  });
+  ```
