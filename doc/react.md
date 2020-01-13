@@ -167,7 +167,10 @@ Use `this.setState()` method to set the statue value.
 ```js
 this.setState({itemsArray : []});
 ```
-Do not modify state directly.
+Do not modify state directly. This is wrong:
+```js
+this.state.comment = 'Hello';
+```
 
 #### Fetch Data
 - From `.json` file
