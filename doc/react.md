@@ -102,3 +102,23 @@ reactDOM.render(<Card/>, document.getElementById('root'));
 ## Props
 #### Concepts 
 - Pass of data from parent component to child components.
+
+#### Pass data from parent component
+```js
+class ItemContainer extends React.Component{
+    render(){
+        // itemsArray is an array of items
+    
+        // Generate item components
+        const items = itemsArray.map(
+            item => <Item key={item.id} {...item} />   // ... will pass all the properties of a item to a item component.
+        );
+        
+        return (
+            <div>
+                {items}
+            </div>
+        )
+    }
+}
+```
