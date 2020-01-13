@@ -131,3 +131,18 @@ class ItemContainer extends React.Component{
     }
 }
 ```
+
+#### Get data in child components
+Access data by `this.props`
+```js
+class Item extends React.Component{
+    render(){
+        // This is an example
+        <div>
+            <p>{this.props.field1}</p>
+            <p>{this.props.field2}</p>
+            <p>{this.props.field3}</p>
+        </div>
+    }
+}
+```
