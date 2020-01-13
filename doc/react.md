@@ -193,3 +193,9 @@ this.state.comment = 'Hello';
         });
   });
   ```
+  
+## Lifecycle Methods
+There are 2 lifecycle methods:
+- `componentDidMount()`: Will get executed whenever your component mounts.
+- `componentWillUnmount()`: Will get executed whenever your component unmounts.
+You can override those methods.
