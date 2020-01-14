@@ -1,5 +1,6 @@
 import React from 'react';
 
+// About component for about page
 export default function About(props) {
   return (
     <div className="row mt-5">
