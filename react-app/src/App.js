@@ -54,8 +54,6 @@ class App extends React.Component {
     this.setState(newState);
   }
 
-
-
   showBuyModalWindow(id,price){
     const state = this.state;
     const newState = Object.assign({},state,{showBuyModal:true,productid:id,price:price});
