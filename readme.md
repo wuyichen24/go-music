@@ -13,7 +13,7 @@ This repository contains the source code of GoMusic web application which is the
    - MySQL
 - **Web Design**
    - Bootstrap
-- **Payment**
+- **Online Payment**
    - [Stripe](https://stripe.com/)
 
 ## Getting Started
