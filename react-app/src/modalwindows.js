@@ -221,17 +221,14 @@ export class SignInModalWindow extends React.Component {
 }
 
 export function BuyModalWindow(props) {
-    return (
-        <Modal id="buy" tabIndex="-1" role="dialog" isOpen={props.showModal} toggle={props.toggle}>
-            <div role="document">
-                    <ModalHeader toggle={props.toggle} className="bg-success text-white">
-                        Buy Item
-                    </ModalHeader>
-                    <ModalBody>
-                        <CreditCardInformation user={props.user} seperator={false} show={true} productid={props.productid} price={props.price} operation="Charge" toggle={props.toggle} />
-                    </ModalBody>
-                </div>
-                      
-        </Modal>
-    );
+  return (
+    <Modal id="buy" tabIndex="-1" role="dialog" isOpen={props.showModal} toggle={props.toggle}>
+      <div role="document">
+        <ModalHeader toggle={props.toggle} className="bg-success text-white">Buy Item</ModalHeader>
+        <ModalBody>
+          <CreditCardInformation user={props.user} seperator={false} show={true} productid={props.productid} price={props.price} operation="Charge" toggle={props.toggle} />
+        </ModalBody>
+      </div>
+    </Modal>
+  );
 } 
