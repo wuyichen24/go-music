@@ -16,7 +16,8 @@
    - [public]()
    - [src]()
       - [Navigations.js](): The navigational menu component.
-      - [ProductCards.js](): The Home and Promotions page components.
+      - [ProductCards.js](): The Home and Promotions page component.
       - [About.js](): The About page component.
-      - [modalwindows.js](): The modal windows components.
+      - [modalwindows.js](): The modal windows (credit card info, sign in, register) component.
+      - [CreditCards.js](): The online payment component.
 - [gin-app]
