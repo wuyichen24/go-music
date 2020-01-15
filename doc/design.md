@@ -3,6 +3,7 @@
 ## System Archtecture
 
 ## Web Design
+#### Modules
 - **Pages**
    - Products Page
    - Promotions Page
@@ -13,6 +14,9 @@
    - Sign In Modal Windows
       - Sign In Form
       - Registration Form
+
+#### React Components And Relationship
+![](https://github.com/wuyichen24/go-music/blob/master/img/component.png)
 
 ## Database
 
