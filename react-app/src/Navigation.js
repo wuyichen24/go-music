@@ -9,6 +9,7 @@ export default class Navigation extends React.Component {
     this.handleSignOut = this.handleSignOut.bind(this);
   }
 
+  // The welcome button on the right of the navigation bar after user logged in
   buildLoggedInMenu() {
     return (
       <div className="navbar-brand order-1 text-white my-auto">
