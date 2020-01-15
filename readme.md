@@ -4,6 +4,7 @@ This repository contains the source code of GoMusic web application which is the
 ## Content List
 - [Technology Stack](#technology-stack)
 - [Getting Started](#getting-started)
+- [Design](doc/design.md)
 
 ## Technology Stack
 - **Server**
