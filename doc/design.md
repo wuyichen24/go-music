@@ -3,17 +3,16 @@
 ## System Archtecture
 
 ## Web Design
-#### Pages
-- Products Page
-- Promotions Page
-- About Page
-- Order Page
-
-#### Modal Windows
-- Buy Modal Windows
-- Sign In Modal Windows
-   - Sign In Form
-   - Registration Form
+- **Pages**
+   - Products Page
+   - Promotions Page
+   - About Page
+   - Order Page
+- **Modal Windows**
+   - Buy Modal Windows
+   - Sign In Modal Windows
+      - Sign In Form
+      - Registration Form
 
 ## Database
 
