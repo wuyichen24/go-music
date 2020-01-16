@@ -16,7 +16,7 @@
       - Registration Form
 
 #### React Components And Relationship
-![](https://github.com/wuyichen24/go-music/blob/master/img/component.png)
+![](../img/component.png)
 
 ## Database
 
@@ -24,6 +24,7 @@
 - [react-app]()
    - [public]()
    - [src]()
+      - [index.js](): This is the javascript file corresponding to index.html.
       - [Navigations.js](): The navigational menu component.
       - [ProductCards.js](): The Home and Promotions page component.
       - [About.js](): The About page component.
