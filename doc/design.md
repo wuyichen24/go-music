@@ -2,8 +2,8 @@
 
 ## System Archtecture
 
-## Web Design
-#### Modules
+## Frontend
+#### Web Modules
 - **Pages**
    - Products Page
    - Promotions Page
@@ -18,7 +18,8 @@
 #### React Components And Relationship
 ![](../img/component.png)
 
-## Database
+## Backend
+#### Database
 
 ## Source Code
 - [react-app](../react-app)
