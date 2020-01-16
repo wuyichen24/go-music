@@ -21,9 +21,9 @@
 ## Database
 
 ## Source Code
-- [react-app]()
-   - [public]()
-   - [src]()
+- [react-app](../react-app)
+   - [public](../react-app/public)
+   - [src](../react-app/src)
       - [index.js](../react-app/src/index.js): This is the javascript file corresponding to index.html.
       - [Navigations.js](../react-app/src/Navigations.js): The navigational menu component.
       - [ProductCards.js](../react-app/src/ProductCards.js): The Home and Promotions page component.
