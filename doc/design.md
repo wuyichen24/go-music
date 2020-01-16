@@ -36,4 +36,15 @@
       - [modalwindows.js](../react-app/src/modalwindows.js): The modal windows (credit card info, sign in, register) component.
       - [CreditCards.js](../react-app/src/CreditCards.js): The online payment component.
       - [order.js](../react-app/src/order.js): The order page component.
-- [gin-app]
+- [gin-app]()
+   - [cmd]()
+      - [main.go](): The main function of this Gin app.
+   - [db]()
+      - [dblayer.go](): Define the database interfaces.
+      - [orm.go](): The implementation of the database interfaces by GORM.
+   - [models]()
+      - [models.go](): Define data models.
+   - [rest]
+      - [handler.go]()
+      - [mockHandler.go]()
+      - [rest.go]()
