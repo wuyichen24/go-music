@@ -7,7 +7,7 @@ import About from './About';
 import Orders from './orders';
 import cookie from 'js-cookie';
 
-
+// The App component for the entry point of other components.
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -23,7 +23,6 @@ class App extends React.Component {
     this.toggleSignInModalWindow = this.toggleSignInModalWindow.bind(this);
     this.showBuyModalWindow      = this.showBuyModalWindow.bind(this);
     this.toggleBuyModalWindow    = this.toggleBuyModalWindow.bind(this);
-    
   }
 
   handleSignedIn(user) {
