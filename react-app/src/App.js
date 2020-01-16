@@ -9,7 +9,6 @@ import cookie from 'js-cookie';
 
 
 class App extends React.Component {
-
   constructor(props) {
     super(props);
     const user = cookie.getJSON("user") || {loggedin:false};
@@ -18,12 +17,12 @@ class App extends React.Component {
       showSignInModal: false,
       showBuyModal: false
     };
-    this.handleSignedIn = this.handleSignedIn.bind(this);
-    this.handleSignedOut = this.handleSignedOut.bind(this);
-    this.showSignInModalWindow = this.showSignInModalWindow.bind(this);
+    this.handleSignedIn          = this.handleSignedIn.bind(this);
+    this.handleSignedOut         = this.handleSignedOut.bind(this);
+    this.showSignInModalWindow   = this.showSignInModalWindow.bind(this);
     this.toggleSignInModalWindow = this.toggleSignInModalWindow.bind(this);
-    this.showBuyModalWindow = this.showBuyModalWindow.bind(this);
-    this.toggleBuyModalWindow = this.toggleBuyModalWindow.bind(this);
+    this.showBuyModalWindow      = this.showBuyModalWindow.bind(this);
+    this.toggleBuyModalWindow    = this.toggleBuyModalWindow.bind(this);
     
   }
 
@@ -65,7 +64,7 @@ class App extends React.Component {
     const newState = Object.assign({},state,{showBuyModal:!state.showBuyModal});
     this.setState(newState); 
   }
-  //location='user.json'
+
   render() {
     return (
       <div>
