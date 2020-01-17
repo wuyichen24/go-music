@@ -72,7 +72,7 @@ func (h *Handler) GetPromos(c *gin.Context) {
 	c.JSON(http.StatusOK, promos)
 }
 
-// Register a new user.
+// Add a new customer.
 func (h *Handler) AddUser(c *gin.Context) {
 	if h.db == nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "server database error"})
@@ -92,7 +92,7 @@ func (h *Handler) AddUser(c *gin.Context) {
 	c.JSON(http.StatusOK, customer)
 }
 
-// Sign in a existing user
+// Sign in a customer.
 func (h *Handler) SignIn(c *gin.Context) {
 	if h.db == nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "server database error"})
@@ -116,7 +116,7 @@ func (h *Handler) SignIn(c *gin.Context) {
 	c.JSON(http.StatusOK, customer)
 }
 
-// Sign in a existing user
+// Sign out a customer.
 func (h *Handler) SignOut(c *gin.Context) {
 	if h.db == nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "server database error"})
@@ -136,7 +136,7 @@ func (h *Handler) SignOut(c *gin.Context) {
 	}
 }
 
-// Get the orders for specific user (by customer id).
+// Get all the orders for a specific customer.
 func (h *Handler) GetOrders(c *gin.Context) {
 	if h.db == nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "server database error"})
@@ -157,6 +157,7 @@ func (h *Handler) GetOrders(c *gin.Context) {
 	c.JSON(http.StatusOK, orders)
 }
 
+// Charge a credit card.
 func (h *Handler) Charge(c *gin.Context) {
 	if h.db == nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "server database error"})
@@ -175,21 +176,24 @@ func (h *Handler) Charge(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, request)
 		return
 	}
-	// Set your secret key: remember to change this to your live secret key in production
+
+	// Set your secret key: Remember to change this to your live secret key in production
 	// Keys can be obtained from: https://dashboard.stripe.com/account/apikeys
 	// They key below is just for testing
 	stripe.Key = "sk_test_4eC39HqLyjWDarjtT1zdp7dc"
-	//test cards available at:	https://stripe.com/docs/testing#cards
-	//setting charge parameters
+
+	// Test cards available at:	https://stripe.com/docs/testing#cards
+	// Setting charge parameters
 	chargeP := &stripe.ChargeParams{
 		Amount:      stripe.Int64(int64(request.Price)),
 		Currency:    stripe.String("usd"),
 		Description: stripe.String("GoMusic charge..."),
 	}
 	stripeCustomerID := ""
-	//Either remembercard or use exeisting should be enabled but not both
+
+	// Either using saved credit card or using a new credit card.
+	// But should be enabled but not both.
 	if request.UseExisting {
-		//use existing
 		log.Println("Getting credit card id...")
 		stripeCustomerID, err = h.db.GetCreditCardCID(request.CustomerID)
 		if err != nil {
@@ -206,8 +210,9 @@ func (h *Handler) Charge(c *gin.Context) {
 			return
 		}
 		stripeCustomerID = customer.ID
+
+		// Save credit card.
 		if request.Remember {
-			//save card!!
 			err = h.db.SaveCreditCardForCustomer(request.CustomerID, stripeCustomerID)
 			if err != nil {
 				c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
@@ -215,7 +220,7 @@ func (h *Handler) Charge(c *gin.Context) {
 			}
 		}
 	}
-	//we should check if the customer already ordered the same item or not but for simplicity, let's assume it's a new order
+	// Check if the customer already ordered the same item or not but for simplicity, let's assume it's a new order.
 	chargeP.Customer = stripe.String(stripeCustomerID)
 	_, err = charge.New(chargeP)
 	if err != nil {

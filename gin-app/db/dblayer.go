@@ -6,26 +6,18 @@ import (
 )
 
 type DBLayer interface {
-	GetAllProducts() ([]models.Product, error)
-	GetPromos() ([]models.Product, error)
-	GetCustomerByName(string, string) (models.Customer, error)
-	GetCustomerByID(int) (models.Customer, error)
-	GetProduct(int) (models.Product, error)
-	AddUser(models.Customer) (models.Customer, error)
-	SignInUser(username, password string) (models.Customer, error)
-	SignOutUserById(int) error
-	GetCustomerOrdersByID(int) ([]models.Order, error)
-	AddOrder(models.Order) error
-	GetCreditCardCID(int) (string, error)
-	SaveCreditCardForCustomer(int, string) error
+	GetAllProducts() ([]models.Product, error)                      // Get a list of products.
+	GetPromos() ([]models.Product, error)                           // Get a list of promotions.
+	GetCustomerByName(string, string) (models.Customer, error)      // Get the customer by name.
+	GetCustomerByID(int) (models.Customer, error)                   // Get the customer by id.
+	GetProduct(int) (models.Product, error)                         // Get the product by id.
+	AddUser(models.Customer) (models.Customer, error)               // Add a new customer.
+	SignInUser(username, password string) (models.Customer, error)  // Sign in a customer.
+	SignOutUserById(int) error                                      // Sign out a customer.
+	GetCustomerOrdersByID(int) ([]models.Order, error)              // Get all the orders for a specific customer.
+	AddOrder(models.Order) error                                    // Add a new order.
+	GetCreditCardCID(int) (string, error)                           // Get a customer saved credit card number.
+	SaveCreditCardForCustomer(int, string) error                    // Save a customer credit card number.
 }
-
-/*
-Passwords:
-mal:123
-john:1111
-jayne:123
-River:abc
-*/
 
 var ErrINVALIDPASSWORD = errors.New("Invalid password")
