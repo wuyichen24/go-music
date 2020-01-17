@@ -44,7 +44,7 @@
       - [orm.go](): The implementation of the database interfaces by GORM.
    - [models]()
       - [models.go](): Define data models.
-   - [rest]
+   - [rest]()
       - [handler.go]()
       - [mockHandler.go]()
       - [rest.go]()
