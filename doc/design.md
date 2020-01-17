@@ -45,6 +45,6 @@
    - [models]()
       - [models.go](): Define data models.
    - [rest]()
-      - [handler.go]()
-      - [mockHandler.go]()
-      - [rest.go]()
+      - [handler.go](): RESTful API handlers.
+      - [mockHandler.go](): The mock up RESTful API handlers for testing.
+      - [rest.go](): The initializer of RESTful API.
