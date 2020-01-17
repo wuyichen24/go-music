@@ -38,13 +38,13 @@
       - [order.js](../react-app/src/order.js): The order page component.
 - [gin-app]()
    - [cmd]()
-      - [main.go](): The main function of this Gin app.
+      - [main.go](../gin-app/cmd/main.go): The main function of this Gin app.
    - [db]()
-      - [dblayer.go](): Define the database interfaces.
-      - [orm.go](): The implementation of the database interfaces by GORM.
+      - [dblayer.go](../gin-app/db/dblayer.go): Define the database interfaces.
+      - [orm.go](../gin-app/db/orm.go.go): The implementation of the database interfaces by GORM.
    - [models]()
-      - [models.go](): Define data models.
+      - [models.go](../gin-app/models/models.go): Define data models.
    - [rest]()
-      - [handler.go](): RESTful API handlers.
-      - [mockHandler.go](): The mock up RESTful API handlers for testing.
-      - [rest.go](): The initializer of RESTful API.
+      - [handler.go](../gin-app/rest/handler.go): RESTful API handlers.
+      - [mockHandler.go](../gin-app/rest/mockHandler.go): The mock up RESTful API handlers for testing.
+      - [rest.go](../gin-app/rest/rest.go): The initializer of RESTful API.
