@@ -24,6 +24,19 @@
 
 ## Backend
 #### Database
+##### customers
+| Column | Type | Primary Key | Default Value | Allow Null |
+|----|----|----|----|----|
+| id | int(11) | Yes |  | No |
+| firstname | varchar(50) |  | '0' | No |
+| lastname | varchar(50) |  | '0' | No |
+| email | varchar(100) |  | '0' | No |
+| pass | varchar(100) |  | '0' | No |
+| cc_customerid | varchar(50) |  | '0' | No |
+| loggedin | tinyint(1) |  | '0' | No |
+| created_at | timestamp |  | CURRENT_TIMESTAMP | Yes |
+| updated_at | timestamp |  | CURRENT_TIMESTAMP | Yes |
+| deleted_at | timestamp |  | NULL | Yes |
 
 ## Source Code Structure
 - [react-app](../react-app)
