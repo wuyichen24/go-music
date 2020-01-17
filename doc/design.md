@@ -1,8 +1,11 @@
 ## Overview 
-- [System Archtecture]()
-- [Frontend]()
-- [Backend]()
-- [Source Code Structure]()
+- [**System Archtecture**]()
+- [**Frontend**]()
+   - [Web Modules]()
+   - [React Components And Relationship]()
+- [**Backend**]()
+   - [Database Tables]()
+- [**Source Code Structure**]()
 
 ## System Archtecture
 
@@ -23,7 +26,7 @@
 ![](../img/component.png)
 
 ## Backend
-#### Database
+#### Database Tables
 ##### customers
 | Column | Type | Primary Key | Default Value | Allow Null |
 |----|----|----|----|----|
@@ -46,6 +49,21 @@
 | product_id | int(11) |  |  | No |
 | price | int(11) |  |  | No |
 | purchase_date | timestamp |  | CURRENT_TIMESTAMP | No |
+| created_at | timestamp |  | CURRENT_TIMESTAMP | Yes |
+| updated_at | timestamp |  | CURRENT_TIMESTAMP | Yes |
+| deleted_at | timestamp |  | NULL | Yes |
+
+##### products
+| Column | Type | Primary Key | Default Value | Allow Null |
+|----|----|----|----|----|
+| id | int(11) | Yes |  | No |
+| image | varchar(100) |  | NULL |  |
+| smallimg | varchar(100) |  | NULL |  |
+| imgalt | varchar(50) |  | NULL |  |
+| description | text |  |  |  |
+| productname | varchar(50) |  | NULL |  |
+| price | float |  | NULL |  |
+| promotion | float |  | NULL |  |
 | created_at | timestamp |  | CURRENT_TIMESTAMP | Yes |
 | updated_at | timestamp |  | CURRENT_TIMESTAMP | Yes |
 | deleted_at | timestamp |  | NULL | Yes |
