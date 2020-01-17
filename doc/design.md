@@ -38,6 +38,18 @@
 | updated_at | timestamp |  | CURRENT_TIMESTAMP | Yes |
 | deleted_at | timestamp |  | NULL | Yes |
 
+##### orders
+| Column | Type | Primary Key | Default Value | Allow Null |
+|----|----|----|----|----|
+| id | int(11) | Yes |  | No |
+| customer_id | int(11) |  |  | No |
+| product_id | int(11) |  |  | No |
+| price | int(11) |  |  | No |
+| purchase_date | timestamp |  | CURRENT_TIMESTAMP | No |
+| created_at | timestamp |  | CURRENT_TIMESTAMP | Yes |
+| updated_at | timestamp |  | CURRENT_TIMESTAMP | Yes |
+| deleted_at | timestamp |  | NULL | Yes |
+
 ## Source Code Structure
 - [react-app](../react-app)
    - [public](../react-app/public)
