@@ -1,5 +1,5 @@
 # Account
-There are some user accounts for testing.
+There are some user accounts for testing sign-in and sign-out.
 
 | Email | Password |
 |---|---|
