@@ -1,7 +1,7 @@
 package rest
 
 import (
-	"fmt" //"github.com/gin-gonic/autotls"
+	"fmt"
 
 	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"
@@ -21,24 +21,10 @@ func RunMockAPI(address string) error {
 }
 
 func RunAPIWithHandler(address string, h HandlerInterface) error {
-	//Get gin's default engine
 	r := gin.Default()
-	//r.Use(MyCustomLogger())
 
-	//get products
 	r.GET("/products", h.GetProducts)
-	//get promos
 	r.GET("/promos", h.GetPromos)
-	/*
-		//post user sign in
-		r.POST("/user/signin", h.SignIn)
-		//post user sign out
-		r.POST("/user/:id/signout", h.SignOut)
-		//get user orders
-		r.GET("/user/:id/orders", h.GetOrders)
-		//post purchase charge
-		r.POST("/user/charge", h.Charge)
-	*/
 
 	userGroup := r.Group("/user")
 	{
@@ -52,9 +38,9 @@ func RunAPIWithHandler(address string, h HandlerInterface) error {
 		usersGroup.POST("/signin", h.SignIn)
 		usersGroup.POST("", h.AddUser)
 	}
+
 	r.Use(static.ServeRoot("/", "../public/build"))
 	return r.Run(address)
-	//return r.RunTLS(address, "cert.pem", "key.pem")
 }
 
 func MyCustomLogger() gin.HandlerFunc {

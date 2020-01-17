@@ -2,7 +2,7 @@ package rest
 
 import (
 	"fmt"
-	"go-music/gin-app/dblayer"
+	"go-music/gin-app/db"
 	"go-music/gin-app/models"
 	"log"
 	"net/http"
@@ -25,11 +25,11 @@ type HandlerInterface interface {
 }
 
 type Handler struct {
-	db dblayer.DBLayer
+	db db.DBLayer
 }
 
 func NewHandler() (HandlerInterface, error) {
-	db, err := dblayer.NewORM("mysql", "root:6ytow2-;S3lA@/gomusic")
+	db, err := db.NewORM("mysql", "root:6ytow2-;S3lA@/gomusic")
 	if err != nil {
 		return nil, err
 	}
@@ -41,9 +41,9 @@ func NewHandler() (HandlerInterface, error) {
 func (h *Handler) GetMainPage(c *gin.Context) {
 	log.Println("Main page....")
 	c.String(http.StatusOK, "Main page for secure API!!")
-	//fmt.Fprintf(c.Writer, "Main page for secure API!!")
 }
 
+// Get a list of products.
 func (h *Handler) GetProducts(c *gin.Context) {
 	if h.db == nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "server database error"})
@@ -58,6 +58,7 @@ func (h *Handler) GetProducts(c *gin.Context) {
 	c.JSON(http.StatusOK, products)
 }
 
+// Get a list of promotions.
 func (h *Handler) GetPromos(c *gin.Context) {
 	if h.db == nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "server database error"})
@@ -71,6 +72,7 @@ func (h *Handler) GetPromos(c *gin.Context) {
 	c.JSON(http.StatusOK, promos)
 }
 
+// Register a new user.
 func (h *Handler) AddUser(c *gin.Context) {
 	if h.db == nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "server database error"})
@@ -90,6 +92,7 @@ func (h *Handler) AddUser(c *gin.Context) {
 	c.JSON(http.StatusOK, customer)
 }
 
+// Sign in a existing user
 func (h *Handler) SignIn(c *gin.Context) {
 	if h.db == nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "server database error"})
@@ -103,7 +106,7 @@ func (h *Handler) SignIn(c *gin.Context) {
 	}
 	customer, err = h.db.SignInUser(customer.Email, customer.Pass)
 	if err != nil {
-		if err == dblayer.ErrINVALIDPASSWORD {
+		if err == db.ErrINVALIDPASSWORD {
 			c.JSON(http.StatusForbidden, gin.H{"error": err.Error()})
 			return
 		}
@@ -113,6 +116,7 @@ func (h *Handler) SignIn(c *gin.Context) {
 	c.JSON(http.StatusOK, customer)
 }
 
+// Sign in a existing user
 func (h *Handler) SignOut(c *gin.Context) {
 	if h.db == nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "server database error"})
@@ -132,6 +136,7 @@ func (h *Handler) SignOut(c *gin.Context) {
 	}
 }
 
+// Get the orders for specific user (by customer id).
 func (h *Handler) GetOrders(c *gin.Context) {
 	if h.db == nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "server database error"})
