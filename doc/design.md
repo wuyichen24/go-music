@@ -27,6 +27,7 @@
 
 ## Backend
 #### Database Tables
+![](../img/entity_relationship.png)
 ##### customers
 | Column | Type | Primary Key | Default Value | Allow Null |
 |----|----|----|----|----|
