@@ -8,6 +8,7 @@
 - [**Source Code Structure**]()
 
 ## System Archtecture
+![](../img/system_archtecture.png)
 
 ## Frontend
 #### Web Modules
