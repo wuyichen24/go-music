@@ -105,5 +105,5 @@
       - [models.go](../gin-app/models/models.go): Define data models.
    - [rest]()
       - [handler.go](../gin-app/rest/handler.go): RESTful API handlers.
-      - [mockHandler.go](../gin-app/rest/mockHandler.go): The mock up RESTful API handlers for testing.
+      - [mockHandler.go](../gin-app/rest/mockHandler.go): The mock up RESTful API handlers for testing by loading data from `mockdata.json`.
       - [rest.go](../gin-app/rest/rest.go): The initializer of RESTful API.
