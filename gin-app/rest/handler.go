@@ -220,8 +220,11 @@ func (h *Handler) Charge(c *gin.Context) {
 			}
 		}
 	}
-	// Check if the customer already ordered the same item or not but for simplicity, let's assume it's a new order.
+
+	// Assign the stipe customer id to the *stripe.ChargeParams object.
 	chargeP.Customer = stripe.String(stripeCustomerID)
+
+	// Charge the credit card.
 	_, err = charge.New(chargeP)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
