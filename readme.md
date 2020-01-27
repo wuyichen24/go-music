@@ -51,3 +51,4 @@ Please see [here](doc/configuration.md)
 ## Differences to The Original Source Code
 - Make sure the code is runnable (Fix some issues in the original source code).
 - Better documentation.
+- Add comments to make the code easy to read.
