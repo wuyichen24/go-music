@@ -9,12 +9,27 @@
 - [State](#state)
 - [Lifecycle Methods](#lifecycle-methods)
 
-## Installation
+## Commands
 #### Create React App
+```bash
+npm install -g create-react-app
+create-react-app <your app name>
+```
+#### Download All The Dependencies for React App
+```bash
+npm install
+```
+
+#### Start React App
+- Development mode
   ```bash
-  npm install -g create-react-app
-  create-react-app <your app name>
+  npm start
   ```
+- Production mode
+  ```bash
+  npm run build
+  ```
+  This command will compile the entire application to some static files, Those static files will be hold in the folder `build`.
 
 ## JSX
 #### Concepts 
