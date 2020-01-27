@@ -37,10 +37,11 @@ This repository contains the source code of GoMusic web application which is the
   cd go-music
   npm install
   ```
-- Start react server.
+- Start react server (development mode).
   ```bash
   npm start
   ```
+  (For production, use command: `npm run build`)
 
 ## Design
 Please see [here](doc/design.md)
