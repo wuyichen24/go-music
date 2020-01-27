@@ -1,13 +1,15 @@
 ## Overview 
-- [**System Archtecture**]()
-- [**Frontend**]()
-   - [Web Modules]()
-   - [React Components And Relationship]()
-- [**Backend**]()
-   - [Database Tables]()
-- [**Source Code Structure**]()
+- [**System Archtecture**](#system-archtecture)
+- [**Frontend**](#frontend)
+   - [Web Modules](#web-modules)
+   - [React Components And Relationship](#react-components-and-relationship)
+- [**Backend**](#backend)
+   - [Database Tables](#database-tables)
+   - [APIs](#apis)
+- [**Source Code Structure**](#source-code-structure)
 
 ## System Archtecture
+![](../img/system_archtecture.png)
 
 ## Frontend
 #### Web Modules
@@ -68,6 +70,19 @@
 | created_at | timestamp |  | CURRENT_TIMESTAMP | Yes |
 | updated_at | timestamp |  | CURRENT_TIMESTAMP | Yes |
 | deleted_at | timestamp |  | NULL | Yes |
+
+#### APIs
+| Method | URL | Description |
+|---|---|---|
+| GET | `/products` | Get a list of products. |
+| GET | `/promos` | Get a list of promotions. |
+| POST | `/user/<id>/signout` | Sign out a customer. |
+| POST | `/users/signin` | Sign out a customer. |
+| POST | `/users` | Register a new customer. |
+| GET | `/user/<id>/order` | Get all the orders for a specific customer. |
+| POST | `/users/charge` | Charge a credit card. |
+
+
 
 ## Source Code Structure
 - [react-app](../react-app)
