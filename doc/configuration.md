@@ -17,15 +17,23 @@
   
 ## Stripe API Key
 - **Description**: Stripe requires an API key for online credit card charging.
-- **Location**: react-app/src/[CreditCards.js](../react-app/src/CreditCards.js)
-  ```js
-  export default function CreditCardInformation(props) {
-    // omit other lines
-    return (
-      <div>
-        <StripeProvider apiKey="pk_test_TYooMQauvdEDq54NiTphI7jx">
-        </StripeProvider>
-      </div>
-    );
-  }
-  ```
+- **Location**: 
+   - react-app/src/[CreditCards.js](../react-app/src/CreditCards.js)
+     ```js
+     export default function CreditCardInformation(props) {
+       // omit other lines
+       return (
+         <div>
+           <StripeProvider apiKey="pk_test_TYooMQauvdEDq54NiTphI7jx">
+           </StripeProvider>
+         </div>
+       );
+     }
+     ```
+  - gin-app/rest/[handler.go](../gin-app/rest/handler.go)
+    ```go
+    func (h *Handler) Charge(c *gin.Context) {
+        // omit other lines
+        stripe.Key = "sk_test_4eC39HqLyjWDarjtT1zdp7dc"
+    }
+    ```
