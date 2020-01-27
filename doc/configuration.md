@@ -20,6 +20,7 @@
 - **Location**: react-app/src/[CreditCards.js](../react-app/src/CreditCards.js)
   ```js
   export default function CreditCardInformation(props) {
+    // omit other lines
     return (
       <div>
         <StripeProvider apiKey="pk_test_TYooMQauvdEDq54NiTphI7jx">
