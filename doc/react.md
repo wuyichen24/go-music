@@ -29,7 +29,7 @@ npm install
   ```bash
   npm run build
   ```
-  This command will compile the entire application to some static files, Those static files will be hold in the folder `build`.
+  This command will compile the entire application to some static files, Those static files will be hold in the folder `build`. You can copy the `build` folder to anywhere you want to deploy.
 
 ## JSX
 #### Concepts 
