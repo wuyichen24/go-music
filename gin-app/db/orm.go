@@ -118,7 +118,7 @@ func (db *DBORM) AddOrder(order models.Order) error {
 	return db.Create(&order).Error
 }
 
-// Get a customer saved credit card number.
+// Get the stripe customer ID
 func (db *DBORM) GetCreditCardCID(id int) (string, error) {
 	cusomterWithCCID := struct {
 		models.Customer
@@ -128,7 +128,7 @@ func (db *DBORM) GetCreditCardCID(id int) (string, error) {
 	return cusomterWithCCID.CCID, db.First(&cusomterWithCCID, id).Error
 }
 
-// Save a customer credit card number.
+// Save the stripe customer ID to our database.
 func (db *DBORM) SaveCreditCardForCustomer(id int, ccid string) error {
 	result := db.Table("customers").Where("id=?", id)
 	return result.Update("cc_customerid", ccid).Error

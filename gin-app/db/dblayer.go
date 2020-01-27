@@ -17,7 +17,7 @@ type DBLayer interface {
 	GetCustomerOrdersByID(int) ([]models.Order, error)              // Get all the orders for a specific customer.
 	AddOrder(models.Order) error                                    // Add a new order.
 	GetCreditCardCID(int) (string, error)                           // Get a customer saved credit card number.
-	SaveCreditCardForCustomer(int, string) error                    // Save a customer credit card number.
+	SaveCreditCardForCustomer(int, string) error                    // Save the stripe customer ID to our database
 }
 
 var ErrINVALIDPASSWORD = errors.New("Invalid password")
