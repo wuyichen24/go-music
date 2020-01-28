@@ -7,7 +7,7 @@ This repository contains the source code of GoMusic web application which is the
 - [Design](#design)
 - [Configuration](#configuration)
 - [Differences to The Original Source Code](#differences-to-the-original-source-code)
-- [Study Nofe of React](doc/react.md)
+- [Study Note of React](doc/react.md)
 
 ## Technology Stack
 - **Server**
