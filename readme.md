@@ -8,14 +8,14 @@ This repository contains the source code of GoMusic web application which is the
 More [screenshots](doc/screenshots.md) of the GoMusic web application.
 
 ## Content List
-- [Technology Stack](#technology-stack)
-- [Getting Started](#getting-started)
-- [Design](#design)
-- [Configuration](#configuration)
-- [Differences to The Original Source Code](#differences-to-the-original-source-code)
-- [Study Note of React](doc/react.md)
-- [Accounts for Playing](#accounts-for-playing)
-- [Screenshots](doc/screenshots.md)
+- [**Technology Stack**](#technology-stack)
+- [**Getting Started**](#getting-started)
+- [**Design**](#design)
+- [**Configuration**](#configuration)
+- [**Differences to The Original Source Code**](#differences-to-the-original-source-code)
+- [**Study Note of React**](doc/react.md)
+- [**Accounts for Playing**](#accounts-for-playing)
+- [**Screenshots**](doc/screenshots.md)
 
 ## Technology Stack
 - **Server**
