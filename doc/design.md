@@ -100,10 +100,13 @@
       - [main.go](../gin-app/cmd/main.go): The main function of this Gin app.
    - [db]()
       - [dblayer.go](../gin-app/db/dblayer.go): Define the database interfaces.
-      - [orm.go](../gin-app/db/orm.go.go): The implementation of the database interfaces by GORM.
+      - [mockdblayer.go](../gin-app/db/mockdblayer.go): The mock up of dblayer.go for providing testing data.
+      - [orm.go](../gin-app/db/orm.go): The implementation of the database interfaces by GORM.
+      - [orm_test.go](../gin-app/db/orm.go): The tester of orm.go.
    - [models]()
       - [models.go](../gin-app/models/models.go): Define data models.
    - [rest]()
       - [handler.go](../gin-app/rest/handler.go): RESTful API handlers.
+      - [handler_test.go](../gin-app/rest/handler_test.go): The tester of handler.go.
       - [mockHandler.go](../gin-app/rest/mockHandler.go): The mock up RESTful API handlers for testing by loading data from `mockdata.json`.
       - [rest.go](../gin-app/rest/rest.go): The initializer of RESTful API.
