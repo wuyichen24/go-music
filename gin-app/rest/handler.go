@@ -38,6 +38,20 @@ func NewHandler() (HandlerInterface, error) {
 	}, nil
 }
 
+func NewHandlerWithParams(dbtype, conn string) (HandlerInterface, error) {
+	db, err := db.NewORM(dbtype, conn)
+	if err != nil {
+		return nil, err
+	}
+	return &Handler{
+		db: db,
+	}, nil
+}
+
+func NewHandlerWithDB(db db.DBLayer) HandlerInterface {
+	return &Handler{db: db}
+}
+
 func (h *Handler) GetMainPage(c *gin.Context) {
 	log.Println("Main page....")
 	c.String(http.StatusOK, "Main page for secure API!!")

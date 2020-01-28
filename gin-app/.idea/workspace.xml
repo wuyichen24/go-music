@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef3df8fa-b0a0-44aa-be32-873834f16372" name="Default Changelist" comment="" />
+    <list default="true" id="ef3df8fa-b0a0-44aa-be32-873834f16372" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/rest/handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/mockHandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/rest/mockHandler.go" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
   <component name="GOROOT" path="/usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1W68yAQRKXMmyjeSolBtLME83Y4" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
@@ -33,7 +51,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go (1)">
+  <component name="RunManager" selected="Go Test.BenchmarkHashPassword in go-music/gin-app/db">
     <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="gin-app" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -43,12 +61,37 @@
     </configuration>
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="gin-app" />
+      <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/main.go" />
       <method v="2" />
     </configuration>
+    <configuration name="BenchmarkHashPassword in go-music/gin-app/db" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="gin-app" />
+      <working_directory value="$PROJECT_DIR$/db" />
+      <framework value="gobench" />
+      <kind value="PACKAGE" />
+      <package value="go-music/gin-app/db" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^BenchmarkHashPassword$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestHandler_GetProducts in go-music/gin-app/rest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="gin-app" />
+      <working_directory value="$PROJECT_DIR$/rest" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="go-music/gin-app/rest" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestHandler_GetProducts$" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.BenchmarkHashPassword in go-music/gin-app/db" />
+        <item itemvalue="Go Test.TestHandler_GetProducts in go-music/gin-app/rest" />
         <item itemvalue="Go Build.go build main.go (1)" />
         <item itemvalue="Go Build.go build main.go" />
       </list>
