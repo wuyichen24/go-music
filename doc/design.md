@@ -102,7 +102,7 @@
       - [dblayer.go](../gin-app/db/dblayer.go): Define the database interfaces.
       - [mockdblayer.go](../gin-app/db/mockdblayer.go): The mock up of dblayer.go for providing testing data.
       - [orm.go](../gin-app/db/orm.go): The implementation of the database interfaces by GORM.
-      - [orm_test.go](../gin-app/db/orm.go): The tester of orm.go.
+      - [orm_test.go](../gin-app/db/orm.go): The performance testing (benchmarking) of orm.go.
    - [models]()
       - [models.go](../gin-app/models/models.go): Define data models.
    - [rest]()
