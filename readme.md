@@ -5,6 +5,7 @@
 This repository contains the source code of GoMusic web application which is the example in the book "[Hands-On Full Stack Development with Go(Mina Andrawos)](https://www.packtpub.com/web-development/hands-full-stack-development-go)".
 
 ![](img/main_page.png)
+More [screenshots](doc/screenshots.md) of the web application.
 
 ## Content List
 - [Technology Stack](#technology-stack)
@@ -14,6 +15,7 @@ This repository contains the source code of GoMusic web application which is the
 - [Differences to The Original Source Code](#differences-to-the-original-source-code)
 - [Study Note of React](doc/react.md)
 - [Accounts for Playing](#accounts-for-playing)
+- [Screenshots](doc/screenshots.md)
 
 ## Technology Stack
 - **Server**
