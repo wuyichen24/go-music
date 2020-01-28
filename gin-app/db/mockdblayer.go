@@ -8,12 +8,13 @@ import (
 )
 
 type MockDBLayer struct {
-	err       error
+	err       error               // This is an error type that we can set at will whenever we need to simulate an error scenario.
 	products  []models.Product
 	customers []models.Customer
 	orders    []models.Order
 }
 
+// Constructor of mock type with hardcoded data.
 func NewMockDBLayerWithData() *MockDBLayer {
 	PRODUCTS := `[
 		{
@@ -428,6 +429,7 @@ func NewMockDBLayerWithData() *MockDBLayer {
 	return NewMockDBLayer(products, customers, orders)
 }
 
+// Constructor of mock type without data.
 func NewMockDBLayer(products []models.Product, customers []models.Customer, orders []models.Order) *MockDBLayer {
 	return &MockDBLayer{
 		products:  products,
@@ -436,7 +438,7 @@ func NewMockDBLayer(products []models.Product, customers []models.Customer, orde
 	}
 }
 
-func (mock *MockDBLayer) GetMockProductData() []models.Product {
+func (mock *MockDBLayer) GetMockProductsData() []models.Product {
 	return mock.products
 }
 
