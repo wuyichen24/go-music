@@ -50,6 +50,8 @@ Please see [here](doc/design.md)
 Please see [here](doc/configuration.md)
 
 ## Differences to The Original Source Code
+- Flatten the source code by chapter into one application.
 - Make sure the code is runnable (Fix some issues in the original source code).
 - Better documentation.
 - Add comments to make the code easy to read.
+
