@@ -1,4 +1,7 @@
 # go-music
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0) 
+
 This repository contains the source code of GoMusic web application which is the example in the book "[Hands-On Full Stack Development with Go(Mina Andrawos)](https://www.packtpub.com/web-development/hands-full-stack-development-go)".
 
 ## Content List
